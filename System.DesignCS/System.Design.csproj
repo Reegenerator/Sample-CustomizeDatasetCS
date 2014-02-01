@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3003DF8-9722-468F-BA7D-CC9D4B5F0E26}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>System.Design</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="Accessibility" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Core" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="System\ExternDll.cs" />
+    <Compile Include="System\Internal\HandleCollector.cs" />
+    <Compile Include="System\Internal\HandleChangeEventHandler.cs" />
+    <Compile Include="System\HResults.cs" />
+    <Compile Include="System\Design\NativeMethods.cs" />
+    <Compile Include="System\Design\SafeNativeMethods.cs" />
+    <Compile Include="System\Design\UnsafeNativeMethods.cs" />
+    <Compile Include="System\Data\Design\ADODataType.cs" />
+    <Compile Include="System\Data\Design\CodeGenHelper.cs" />
+    <Compile Include="System\Data\Design\ConnectionString.cs" />
+    <Compile Include="System\Data\Design\ConversionHelper.cs" />
+    <Compile Include="System\Data\Design\IObjectWithParent.cs" />
+    <Compile Include="System\Data\Design\IDataSourceCollectionMember.cs" />
+    <Compile Include="System\Data\Design\IDataSourceRenamableObject.cs" />
+    <Compile Include="System\Data\Design\DataSourceComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Data\Design\DataAccessor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Data\Design\DataComponentGenerator.cs" />
+    <Compile Include="System\Data\Design\DataComponentMethodGenerator.cs" />
+    <Compile Include="System\Data\Design\DataComponentNameHandler.cs" />
+    <Compile Include="System\Data\Design\DataDesignUtil.cs" />
+    <Compile Include="System\Data\Design\DatasetMethodGenerator.cs" />
+    <Compile Include="System\Data\Design\INamedObjectCollection.cs" />
+    <Compile Include="System\Data\Design\DataSourceCollectionBase.cs" />
+    <Compile Include="System\Data\Design\DataSourceGeneratorException.cs" />
+    <Compile Include="System\Data\Design\TypedDataSetGeneratorException.cs" />
+    <Compile Include="System\Data\Design\DataSourceNameHandler.cs" />
+    <Compile Include="System\Data\Design\DataSourceSerializationException.cs" />
+    <Compile Include="System\Data\Design\DataSourceXmlSerializationAttribute.cs" />
+    <Compile Include="System\Data\Design\DataSourceXmlAttributeAttribute.cs" />
+    <Compile Include="System\Data\Design\DataSourceXmlClassAttribute.cs" />
+    <Compile Include="System\Data\Design\DataSourceXmlElementAttribute.cs" />
+    <Compile Include="System\Data\Design\DataSourceXmlSerializer.cs" />
+    <Compile Include="System\Data\Design\DataSourceXmlSubItemAttribute.cs" />
+    <Compile Include="System\Data\Design\DataSourceXmlTextReader.cs" />
+    <Compile Include="System\Data\Design\DataTableNameHandler.cs" />
+    <Compile Include="System\Data\Design\QueryType.cs" />
+    <Compile Include="System\Data\Design\GenerateMethodTypes.cs" />
+    <Compile Include="System\Data\Design\INamedObject.cs" />
+    <Compile Include="System\Data\Design\IDataSourceNamedObject.cs" />
+    <Compile Include="System\Data\Design\Source.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Data\Design\IDataSourceXmlSpecialOwner.cs" />
+    <Compile Include="System\Data\Design\DbSource.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Data\Design\DbSourceCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Data\Design\DbSourceParameterCollection.cs" />
+    <Compile Include="System\Data\Design\DesignColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Data\Design\DesignColumnCollection.cs" />
+    <Compile Include="System\Data\Design\IDataSourceInitAfterLoading.cs" />
+    <Compile Include="System\Data\Design\IDesignConnection.cs" />
+    <Compile Include="System\Data\Design\DesignConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Data\Design\IDesignConnectionCollection.cs" />
+    <Compile Include="System\Data\Design\DesignConnectionCollection.cs" />
+    <Compile Include="System\Data\Design\IDataSourceCommandTarget.cs" />
+    <Compile Include="System\Data\Design\DesignDataSource.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Data\Design\DesignParameter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Data\Design\DesignRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Data\Design\DesignRelationCollection.cs" />
+    <Compile Include="System\Data\Design\IDataSourceXmlSerializable.cs" />
+    <Compile Include="System\Data\Design\DesignTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Data\Design\DesignTableCollection.cs" />
+    <Compile Include="System\Data\Design\DesignUtil.cs" />
+    <Compile Include="System\Data\Design\ProblemSeverity.cs" />
+    <Compile Include="System\Data\Design\DSGeneratorProblem.cs" />
+    <Compile Include="System\Data\Design\ExtendedPropertiesHandler.cs" />
+    <Compile Include="System\Data\Design\QueryGeneratorBase.cs" />
+    <Compile Include="System\Data\Design\FunctionGenerator.cs" />
+    <Compile Include="System\Data\Design\GenericNameHandler.cs" />
+    <Compile Include="System\Data\Design\InternalException.cs" />
+    <Compile Include="System\Data\Design\MemberNameValidator.cs" />
+    <Compile Include="System\Data\Design\MethodSignatureGenerator.cs" />
+    <Compile Include="System\Data\Design\NameHandler.cs" />
+    <Compile Include="System\Data\Design\INameService.cs" />
+    <Compile Include="System\Data\Design\NamedObjectUtil.cs" />
+    <Compile Include="System\Data\Design\NameValidationException.cs" />
+    <Compile Include="System\Data\Design\PropertyReferenceSerializer.cs" />
+    <Compile Include="System\Data\Design\ProviderManager.cs" />
+    <Compile Include="System\Data\Design\QueryGenerator.cs" />
+    <Compile Include="System\Data\Design\ParameterGenerationOption.cs" />
+    <Compile Include="System\Data\Design\QueryHandler.cs" />
+    <Compile Include="System\Data\Design\RelationHandler.cs" />
+    <Compile Include="System\Data\Design\SchemaName.cs" />
+    <Compile Include="System\Data\Design\SimpleNamedObject.cs" />
+    <Compile Include="System\Data\Design\SimpleNamedObjectCollection.cs" />
+    <Compile Include="System\Data\Design\SimpleNameService.cs" />
+    <Compile Include="System\Data\Design\DataSetNameService.cs" />
+    <Compile Include="System\Data\Design\SourceNameService.cs" />
+    <Compile Include="System\Data\Design\SourceCollection.cs" />
+    <Compile Include="System\Data\Design\StringUtil.cs" />
+    <Compile Include="System\Data\Design\TableAdapterManagerGenerator.cs" />
+    <Compile Include="System\Data\Design\TableAdapterManagerHelper.cs" />
+    <Compile Include="System\Data\Design\TableAdapterManagerMethodGenerator.cs" />
+    <Compile Include="System\Data\Design\TableAdapterManagerNameHandler.cs" />
+    <Compile Include="System\Data\Design\TableMethodGenerator.cs" />
+    <Compile Include="System\Data\Design\TableType.cs" />
+    <Compile Include="System\Data\Design\OleDbParameterDirection.cs" />
+    <Compile Include="System\Data\Design\OleDbDataType.cs" />
+    <Compile Include="System\Data\Design\TypeConvertions.cs" />
+    <Compile Include="System\Data\Design\TypedColumnHandler.cs" />
+    <Compile Include="System\Data\Design\TypedDataSetGenerator.cs" />
+    <Compile Include="System\Data\Design\TypedDataSetSchemaImporterExtension.cs" />
+    <Compile Include="System\Data\Design\Keywords.cs" />
+    <Compile Include="System\Data\Design\TypedDataSetSchemaImporterExtensionFx35.cs" />
+    <Compile Include="System\Data\Design\TypeEnum.cs" />
+    <Compile Include="System\Data\Design\DbObjectType.cs" />
+    <Compile Include="System\Data\Design\CommandOperation.cs" />
+    <Compile Include="System\Data\Design\ManagedProviderNames.cs" />
+    <Compile Include="System\Data\Design\TypedDataSourceCodeGenerator.cs" />
+    <Compile Include="System\Data\Design\TypedRowGenerator.cs" />
+    <Compile Include="System\Data\Design\TypedRowHandler.cs" />
+    <Compile Include="System\Data\Design\TypedTableGenerator.cs" />
+    <Compile Include="System\Data\Design\TypedTableHandler.cs" />
+    <Compile Include="System\Data\Design\MethodTypeEnum.cs" />
+    <Compile Include="System\Data\Design\UpdateCommandGenerator.cs" />
+    <Compile Include="System\Data\Design\VSDExceptions.cs" />
+    <Compile Include="System\ComponentModel\CompModSwitches.cs" />
+    <Compile Include="Microsoft\Internal\Performance\CodeMarkers.cs" />
+    <Compile Include="Microsoft\Internal\Performance\CodeMarkerStartEnd.cs" />
+    <Compile Include="Microsoft\Internal\Performance\CodeMarkerExStartEnd.cs" />
+    <Compile Include="FXAssembly.cs" />
+    <Compile Include="ThisAssembly.cs" />
+    <Compile Include="AssemblyRef.cs" />
+    <Compile Include="System\Design\SRDescriptionAttribute.cs" />
+    <Compile Include="System\Design\SRCategoryAttribute.cs" />
+    <Compile Include="System\Design\SR.cs" />
+    <EmbeddedResource Include="System.Design.resources" />
+    <EmbeddedResource Include="System.ComponentModel.Design.BinaryEditor.resources" />
+    <EmbeddedResource Include="System.ComponentModel.Design.CollectionEditor.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.DataGridAutoFormatDialog.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.DataGridViewAutoFormatDialog.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.DataGridViewAddColumnDialog.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.DataGridViewColumnCollectionDialog.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.DataGridViewCellStyleBuilder.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.LinkAreaEditor.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.StringCollectionEditor.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.ToolStripItemEditorForm.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.TreeNodeCollectionEditor.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.StyleCollectionEditor.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.ShortcutKeysEditor.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.BorderSidesEditor.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.MaskDesignerDialog.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.BindingFormattingDialog.resources" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.FormatControl.resources" />
+    <EmbeddedResource Include="System.ComponentModel.Design.Arrow.ico" />
+    <EmbeddedResource Include="System.ComponentModel.Design.ComponentEditorPage.ico" />
+    <EmbeddedResource Include="System.ComponentModel.Design.SortDown.ico" />
+    <EmbeddedResource Include="System.ComponentModel.Design.SortUp.ico" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.ChildFolder.ico" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Delete.ico" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Folder.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.Delete.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.SortDown.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.SortUp.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.DataControlFieldsEditor.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.ListControls.DataGridColumnsPage.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.ListControls.DataGridGeneralPage.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.ListControls.DataGridPagingPage.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.ListControls.DataListGeneralPage.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.ListControls.BordersPage.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.ListControls.FormatPage.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.ListControls.Delete.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.ListControls.SortDown.ico" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.ListControls.SortUp.ico" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.BindingFormattingDialog.Arrow.ico" />
+    <EmbeddedResource Include="System.ComponentModel.Design.DateTimeFormat.bmp" />
+    <EmbeddedResource Include="System.ComponentModel.Design.DefaultComponent.bmp" />
+    <EmbeddedResource Include="System.ComponentModel.Design.NumericFormat.bmp" />
+    <EmbeddedResource Include="System.ComponentModel.Design.OrderImages.bmp" />
+    <EmbeddedResource Include="System.ComponentModel.Design.UncheckedBox.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.UserControlToolboxItem.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.InheritedGlyph.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.MoverGlyph.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.ImageEditor.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.ToolStripTemplateNode.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.DataPickerImages.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.AddNewDataSource.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.default.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.professional1.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.professional2.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.classic.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.colorful1.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.256_1.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.256_2.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.BoundProperty.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.InsertableObject.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.Close_left.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.Open_left.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.DesignerShortcutBox.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.leftopen.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.leftclose.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.rightopen.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.rightclose.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.topopen.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.topclose.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.bottomopen.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.Behavior.bottomclose.bmp" />
+    <EmbeddedResource Include="System.Configuration.Design.ManagedProp.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.BindableProperties.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.ExpressionBindableProperties.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.AutoFormat.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.datasourcewizard.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.FieldNodes.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.CustomDataSource.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.ListControls.ColumnNodes.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.Commands.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.DataBindingGlyph.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.ExpressionBindingGlyph.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.ImplicitExpressionBindingGlyph.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.DataGridViewColumnsDialog.delete.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.DataGridViewColumnsDialog.moveUp.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.DataGridViewColumnsDialog.moveDown.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.DataGridViewColumnsDialog.selectedColumns.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.BindingFormattingDialog.Bound.bmp" />
+    <EmbeddedResource Include="System.Windows.Forms.Design.BindingFormattingDialog.Unbound.bmp" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.Minus.gif" />
+    <EmbeddedResource Include="System.Web.UI.Design.WebControls.Plus.gif" />
+  </ItemGroup>
+</Project>
